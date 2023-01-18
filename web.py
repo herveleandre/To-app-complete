@@ -11,7 +11,10 @@ def add_todo():
 todos = functions.get_todos()
 
 st.title("Herve's to-do App")
-st.checkbox("First")
+
+st.text_input(label='', placeholder="Enter a to-do...",
+              on_change=add_todo, key='new_todo')
+
 
 for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
@@ -21,5 +24,3 @@ for index, todo in enumerate(todos):
         del st.session_state[todo]
         st.experimental_rerun()
 
-st.text_input(label='', placeholder="Enter a to-do...",
-              on_change=add_todo, key='new_todo')
