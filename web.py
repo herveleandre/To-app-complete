@@ -10,7 +10,7 @@ def add_todo():
 
 todos = functions.get_todos()
 
-st.title("This is a Title")
+st.title("Herve's to-do App")
 st.checkbox("First")
 
 for index, todo in enumerate(todos):
